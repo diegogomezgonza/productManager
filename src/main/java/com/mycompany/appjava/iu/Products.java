@@ -98,6 +98,11 @@ public class Products extends javax.swing.JFrame {
         });
 
         btnClean.setText("Limpiar");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnSave.setText("Guardar");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -213,6 +218,20 @@ public class Products extends javax.swing.JFrame {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        // TODO add your handling code here:
+        // Al hacer click en el botón de limpiar, el estado de las variables
+        // del formulario, pasa a ser un espacio en blanco
+        txtId.setText("");
+        txtName.setText("");
+        txtClient.setText("");
+        txtPrice.setText("");
+        txtDescription.setText("");
+        // En el caso del combo box al no ser un texto, tenemos que 
+        // establecer su posición (lo que seleccionamos) como vacío
+        txtState.setSelectedIndex(0);
+    }//GEN-LAST:event_btnCleanActionPerformed
 
     /**
      * @param args the command line arguments
