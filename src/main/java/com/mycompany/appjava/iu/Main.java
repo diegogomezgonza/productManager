@@ -156,8 +156,10 @@ public class Main extends javax.swing.JFrame {
     private void btnImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportActionPerformed
         // TODO add your handling code here:
         Products data = new Products();
+        
         // Cuando se haga click, aparecerá la pantalla de los productos
         data.setVisible(true);
+        
         // Al abrirse la pantalla, la posición de la nueva pantalla siempre estará
         // centrada
         data.setLocationRelativeTo(null);

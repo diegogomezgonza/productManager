@@ -221,6 +221,7 @@ public class Products extends javax.swing.JFrame {
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         // TODO add your handling code here:
+        
         // Al hacer click en el botón de limpiar, el estado de las variables
         // del formulario, pasa a ser un espacio en blanco
         txtId.setText("");
@@ -228,6 +229,7 @@ public class Products extends javax.swing.JFrame {
         txtClient.setText("");
         txtPrice.setText("");
         txtDescription.setText("");
+        
         // En el caso del combo box al no ser un texto, tenemos que 
         // establecer su posición (lo que seleccionamos) como vacío
         txtState.setSelectedIndex(0);
