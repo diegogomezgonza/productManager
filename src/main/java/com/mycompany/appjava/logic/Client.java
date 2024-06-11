@@ -17,6 +17,29 @@ public class Client {
     public Client() {
         
     }
+
+    public Client(int idClient, String name) {
+        this.idClient = idClient;
+        this.name = name;
+    }
+    
+    //Getter y setter
+
+    public int getIdClient() {
+        return idClient;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     
     
 }

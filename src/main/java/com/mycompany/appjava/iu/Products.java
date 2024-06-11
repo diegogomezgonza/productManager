@@ -50,7 +50,7 @@ public class Products extends javax.swing.JFrame {
         jLabel1.setText("Importar productos");
         jLabel1.setMaximumSize(new java.awt.Dimension(437, 50));
 
-        jLabel2.setText("Nombre");
+        jLabel2.setText("Producto");
 
         jLabel3.setText("Precio");
 
@@ -219,7 +219,6 @@ public class Products extends javax.swing.JFrame {
         
         // Al hacer click en el botón de limpiar, el estado de las variables
         // del formulario, pasa a ser un espacio en blanco
-        txtId.setText("");
         txtName.setText("");
         txtClient.setText("");
         txtPrice.setText("");
