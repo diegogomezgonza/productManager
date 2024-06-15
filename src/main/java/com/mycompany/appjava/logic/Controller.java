@@ -1,13 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.appjava.logic;
 
-/**
- *
- * @author d
- */
+import com.mycompany.appjava.logic.Persistence.Persistence;
+
 public class Controller {
     
+    //Objeto para el controlador de persistencia
+    Persistence persistenceController = new Persistence();
 }
