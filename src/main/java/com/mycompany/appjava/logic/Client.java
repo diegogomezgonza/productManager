@@ -4,6 +4,7 @@
  */
 package com.mycompany.appjava.logic;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,7 @@ import javax.persistence.Id;
  */
 //Marco dueño también como entidad
 @Entity
-public class Client {
+public class Client implements Serializable {
     
     //Id
     @Id
