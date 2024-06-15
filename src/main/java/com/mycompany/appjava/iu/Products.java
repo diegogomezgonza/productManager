@@ -5,6 +5,8 @@
 package com.mycompany.appjava.iu;
 
 import com.mycompany.appjava.logic.Controller;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class Products extends javax.swing.JFrame {
 
@@ -216,7 +218,12 @@ public class Products extends javax.swing.JFrame {
         //Paso como parámetros las variables auxiliares
         control.save(productName, clientName, productPrice, productDescription, available);
         
-        
+        //Mensaje para notificar la acción
+        JOptionPane optionPane = new JOptionPane("Producto guardado");
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Guardado correcto");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_btnSaveActionPerformed
 
     //Botón para limpiar formulario
