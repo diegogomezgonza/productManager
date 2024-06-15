@@ -18,6 +18,9 @@ public class Persistence {
     ProductJpaController productJpa = new ProductJpaController();
 
     public void save(Client client, Product product) {
+        //Uso de métodos (crear en la BD el cliente y el producto)
+        clientJpa.create(client);
+        productJpa.create(product);
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
