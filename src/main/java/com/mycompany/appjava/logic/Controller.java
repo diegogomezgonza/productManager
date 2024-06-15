@@ -25,6 +25,5 @@ public class Controller {
         
         //Guardar en la BD
         persistenceController.save(client, product);
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
