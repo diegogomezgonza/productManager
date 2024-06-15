@@ -28,8 +28,9 @@ public class Product {
     //Nombre de la mascota
     private String name;
     private String client;
-    private int price;
+    private String price;
     private String description;
+    private String state;
     
     //Necesito hacer relaciones de 1 a 1 ya que una mascota solo puede un dueño
     @OneToOne
@@ -39,13 +40,14 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, String client, int idClient, int price, String description, Client newClient) {
+    public Product(String name, String client, int idClient, String price, String description, Client newClient, String state) {
         this.name = name;
         this.client = client;
         this.idClient = idClient;
         this.price = price;
         this.description = description;
         this.newClient = newClient;
+        this.state = state;
     }
     
     //Getter y setter
@@ -62,7 +64,7 @@ public class Product {
         return idClient;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
@@ -73,6 +75,12 @@ public class Product {
     public Client getNewClient() {
         return newClient;
     }
+
+    public String getState() {
+        return state;
+    }
+   
+  
 
     public void setName(String name) {
         this.name = name;
@@ -86,7 +94,7 @@ public class Product {
         this.idClient = idClient;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -97,6 +105,11 @@ public class Product {
     public void setNewClient(Client newClient) {
         this.newClient = newClient;
     }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+    
     
     
 }
