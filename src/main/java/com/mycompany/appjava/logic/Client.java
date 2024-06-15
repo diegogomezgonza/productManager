@@ -4,13 +4,24 @@
  */
 package com.mycompany.appjava.logic;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author d
  */
+//Marco dueño también como entidad
+@Entity
 public class Client {
-    //Id y nombre del cliente
+    
+    //Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int idClient;
+    
     private String name;
 
     //Constructor
