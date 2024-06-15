@@ -203,6 +203,7 @@ public class Products extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStateActionPerformed
 
+    //Botón para guardar producto
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         String productName = txtName.getText();
         String clientName = txtClient.getText();
@@ -213,11 +214,12 @@ public class Products extends javax.swing.JFrame {
         String available = (String) txtState.getSelectedItem();
         
         //Paso como parámetros las variables auxiliares
-        control.save();
+        control.save(productName, clientName, productPrice, productDescription, available);
         
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
+    //Botón para limpiar formulario
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         // TODO add your handling code here:
         
