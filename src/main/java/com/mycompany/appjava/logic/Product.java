@@ -4,20 +4,35 @@
  */
 package com.mycompany.appjava.logic;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 /**
  *
  * @author d
  */
+// Al marcar mi clase como entidad, me permite poder pasarla como tabla a la bd
+@Entity
 public class Product {
     
     //Propiedades de un producto
+    //ID del cliente
+    //Al indicar que su estrategia será SEQUENCE, generará los id de forma secuencial
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int idClient;
+    
+    //Nombre de la mascota
     private String name;
     private String client;
-    private int idClient;
     private int price;
     private String description;
     
     //Necesito hacer relaciones de 1 a 1 ya que una mascota solo puede un dueño
+    @OneToOne
     private Client newClient;
 
     //Constructor
