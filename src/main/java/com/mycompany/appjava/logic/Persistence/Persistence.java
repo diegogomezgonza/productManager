@@ -10,4 +10,9 @@ package com.mycompany.appjava.logic.Persistence;
  */
 public class Persistence {
     
+    //Objetos para la clases de persistencia
+    ClientJpaController clientJpa = new ClientJpaController();
+    ProductJpaController productJpa = new ProductJpaController();
+    
+    
 }
