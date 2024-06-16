@@ -42,12 +42,14 @@ public class Main extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(54, 33, 89));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Product manager");
 
         jPanel2.setBackground(new java.awt.Color(54, 33, 89));
 
         btnImport.setBackground(new java.awt.Color(110, 89, 222));
         btnImport.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        btnImport.setForeground(new java.awt.Color(255, 255, 255));
         btnImport.setText("Importar");
         btnImport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,10 +59,12 @@ public class Main extends javax.swing.JFrame {
 
         btnProducts.setBackground(new java.awt.Color(110, 89, 222));
         btnProducts.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        btnProducts.setForeground(new java.awt.Color(255, 255, 255));
         btnProducts.setText("Mis productos");
 
         btnOut.setBackground(new java.awt.Color(110, 89, 222));
         btnOut.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        btnOut.setForeground(new java.awt.Color(255, 255, 255));
         btnOut.setText("Salir");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -88,15 +92,19 @@ public class Main extends javax.swing.JFrame {
         );
 
         githubName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        githubName.setForeground(new java.awt.Color(255, 255, 255));
         githubName.setText("@diegogomezgonza");
 
         linkedinName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        linkedinName.setForeground(new java.awt.Color(255, 255, 255));
         linkedinName.setText("Diego Gómez González");
 
         github.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        github.setForeground(new java.awt.Color(255, 255, 255));
         github.setText("GitHub");
 
         linkedin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        linkedin.setForeground(new java.awt.Color(255, 255, 255));
         linkedin.setText("LinkedIn");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
