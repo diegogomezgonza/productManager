@@ -39,4 +39,8 @@ Configurar la Base de Datos:
 Crea una base de datos en MySQL para el proyecto.
 Iniciar la Aplicación:
 Ejecuta el proyecto desde NetBeans.
+![1](https://github.com/diegogomezgonza/productManager/assets/93382813/b3cf2733-1c8b-4aec-a620-2de7efa6a3d2)
+![2](https://github.com/diegogomezgonza/productManager/assets/93382813/d8600315-b0d3-4f2a-a87c-20d336910579)
+
+
 
