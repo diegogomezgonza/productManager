@@ -39,9 +39,14 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 1, 48)); // NOI18N
-        jLabel1.setText("Productos");
+        jPanel1.setBackground(new java.awt.Color(54, 33, 89));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 1, 48)); // NOI18N
+        jLabel1.setText("Product manager");
+
+        jPanel2.setBackground(new java.awt.Color(54, 33, 89));
+
+        btnImport.setBackground(new java.awt.Color(110, 89, 222));
         btnImport.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         btnImport.setText("Importar");
         btnImport.addActionListener(new java.awt.event.ActionListener() {
@@ -50,9 +55,11 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btnProducts.setBackground(new java.awt.Color(110, 89, 222));
         btnProducts.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         btnProducts.setText("Mis productos");
 
+        btnOut.setBackground(new java.awt.Color(110, 89, 222));
         btnOut.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         btnOut.setText("Salir");
 
@@ -80,18 +87,16 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        githubName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        githubName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         githubName.setText("@diegogomezgonza");
 
-        linkedinName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        linkedinName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         linkedinName.setText("Diego Gómez González");
 
-        github.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        github.setForeground(new java.awt.Color(153, 153, 0));
+        github.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         github.setText("GitHub");
 
-        linkedin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        linkedin.setForeground(new java.awt.Color(51, 204, 255));
+        linkedin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         linkedin.setText("LinkedIn");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -106,13 +111,15 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(85, 85, 85)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(github)
-                            .addComponent(linkedin))
-                        .addGap(45, 45, 45)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(githubName)
-                            .addComponent(linkedinName))))
-                .addContainerGap(83, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(linkedin)
+                                .addGap(18, 18, 18)
+                                .addComponent(linkedinName))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(github)
+                                .addGap(31, 31, 31)
+                                .addComponent(githubName)))))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +132,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(149, 149, 149)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(github)
                             .addComponent(githubName))
                         .addGap(51, 51, 51)
@@ -156,10 +163,10 @@ public class Main extends javax.swing.JFrame {
     private void btnImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportActionPerformed
         // TODO add your handling code here:
         Products data = new Products();
-        
+
         // Cuando se haga click, aparecerá la pantalla de los productos
         data.setVisible(true);
-        
+
         // Al abrirse la pantalla, la posición de la nueva pantalla siempre estará
         // centrada
         data.setLocationRelativeTo(null);
