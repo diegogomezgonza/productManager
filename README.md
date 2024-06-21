@@ -3,7 +3,7 @@ Este es un proyecto de Product Manager desarrollado en NetBeans 21, utilizando J
 
 ![1](https://github.com/diegogomezgonza/productManager/assets/93382813/b3cf2733-1c8b-4aec-a620-2de7efa6a3d2)
 ![2](https://github.com/diegogomezgonza/productManager/assets/93382813/d8600315-b0d3-4f2a-a87c-20d336910579)
-
+![3](https://github.com/diegogomezgonza/productManager/assets/93382813/1458246d-a828-4f1b-b930-6954d120ffa0)
 ## Características Principales
 ### Instalación de NetBeans: El proyecto se desarrolla en NetBeans 21.
 ### Uso de JDK 17: Se utiliza JDK 17 para el desarrollo del proyecto.
