@@ -1,5 +1,8 @@
 # Product Manager 
-Este es un proyecto de Product Manager desarrollado en NetBeans 21, utilizando JDK 17 y una base de datos MySQL. Este proyecto permite gestionar productos, añadiendo su nombre, precio y descripción en la base de datos. Además, los productos se relacionan automáticamente con el ID del cliente.
+Este es un proyecto de Product Manager desarrollado en NetBeans 21, utilizando JDK 17 y una base de datos MySQL. Este proyecto permite gestionar productos, añadiendo su nombre, precio, disponibilidad y descripción en la base de datos. Además, los productos se relacionan automáticamente con el ID del cliente.
+
+![1](https://github.com/diegogomezgonza/productManager/assets/93382813/b3cf2733-1c8b-4aec-a620-2de7efa6a3d2)
+![2](https://github.com/diegogomezgonza/productManager/assets/93382813/d8600315-b0d3-4f2a-a87c-20d336910579)
 
 ## Características Principales
 ### Instalación de NetBeans: El proyecto se desarrolla en NetBeans 21.
@@ -39,4 +42,7 @@ Configurar la Base de Datos:
 Crea una base de datos en MySQL para el proyecto.
 Iniciar la Aplicación:
 Ejecuta el proyecto desde NetBeans.
+
+
+
 
