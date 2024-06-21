@@ -175,9 +175,12 @@ public class ProductList extends javax.swing.JFrame {
             //Se tiene que haber seleccionado un producto como mínimo
             if (productTable.getSelectedRow()!=-1) {
                 int idClient = Integer.parseInt(String.valueOf(productTable.getValueAt (productTable.getSelectedRow (), 0)));
-                control.deleteProduct(idClient);
+                EditProduct edit = new EditProduct();
+                edit.setVisible(true);
+                edit.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnEditActionPerformed
-
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;

@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class EditProduct extends javax.swing.JFrame {
 
     //Creo una instancia de la controladora para poder manipular la información desde la IU
-    Controller control = new Controller();
+    Controller control = null;
     
     public EditProduct() {
         initComponents();
