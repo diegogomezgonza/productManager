@@ -1,6 +1,7 @@
 package com.mycompany.appjava.logic;
 
 import com.mycompany.appjava.logic.Persistence.Persistence;
+import java.util.List;
 
 public class Controller {
     
@@ -25,5 +26,9 @@ public class Controller {
         
         //Guardar en la BD
         persistenceController.save(client, product);
+    }
+
+    public List<Product> getProduct() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
