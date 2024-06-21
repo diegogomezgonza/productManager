@@ -212,10 +212,6 @@ public class EditProduct extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
 
-    private void txtClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClientActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtClientActionPerformed
-
     private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPriceActionPerformed
@@ -260,6 +256,10 @@ public class EditProduct extends javax.swing.JFrame {
         // establecer su posición (lo que seleccionamos) como vacío
         txtState.setSelectedIndex(0);
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void txtClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtClientActionPerformed
 
     /**
      * @param args the command line arguments
@@ -317,7 +317,7 @@ public class EditProduct extends javax.swing.JFrame {
 
     private void loadProduct(int idClient) {
         
-        Product prod = control.getProducts(idClient);
+        Product prod = control.getSingleProduct(idClient);
         
         txtName.setText(prod.getName());
         txtClient.setText(prod.getClient());

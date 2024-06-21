@@ -29,4 +29,8 @@ public class Persistence {
     public void deleteProduct(int idClient) {
         productJpa.destroy(idClient);
     }
+
+    public Product getSingleProduct(int idClient) {
+        return productJpa.findProduct(idClient);
+    }
 }
