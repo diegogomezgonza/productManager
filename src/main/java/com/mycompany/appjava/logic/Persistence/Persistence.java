@@ -24,4 +24,9 @@ public class Persistence {
     public List<Product> getProduct() {
         return productJpa.findProductEntities();
     }
+
+    //Método JPA para eliminar los productos
+    public void deleteProduct(int idClient) {
+        productJpa.destroy(idClient);
+    }
 }

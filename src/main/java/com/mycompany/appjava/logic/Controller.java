@@ -33,7 +33,8 @@ public class Controller {
         return persistenceController.getProduct();
     };
 
+    //Se envía el id del cliente para eliminar el producto concreto
     public void deleteProduct(int idClient) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       persistenceController.deleteProduct(idClient);
     }
 }
