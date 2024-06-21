@@ -41,4 +41,31 @@ public class Controller {
     public Product getSingleProduct(int idClient) {
        return persistenceController.getSingleProduct(idClient);
     }
+
+    //Guardar el producto editado
+    public void saveProduct(Product prod, String productName, String clientName, String productPrice, String productDescription, String available) {
+        prod.setName(productName);
+        prod.setClient(clientName);
+        prod.setPrice(available);
+        prod.setDescription(productDescription);
+        prod.setState(available);
+        
+        //Guardar cambios
+        persistenceController.saveProduct(prod);
+        
+        //Guardar el nombre cliente
+        Client cl = this.findClient(prod.getIdClient());
+        cl.setName(clientName);
+        
+        //Modificar información llamando al método
+        this.saveClient(cl);
+    }
+
+    private Client findClient(int idClient) {
+        return persistenceController.findClient(idClient);
+    }
+
+    private void saveClient(Client cl) {
+        persistenceController.saveClient(cl);
+    }
 }

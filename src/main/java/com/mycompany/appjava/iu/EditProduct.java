@@ -14,10 +14,12 @@ public class EditProduct extends javax.swing.JFrame {
     //Creo una instancia de la controladora para poder manipular la información desde la IU
     Controller control = null;
     int idClient;
+    Product prod;
     
     public EditProduct(int idClient) {
-        control = new Controller();
+        this.control = new Controller();
         this.idClient = idClient;
+        this.prod = control.getSingleProduct(idClient);
         initComponents();
         loadProduct(idClient);
     }
@@ -231,12 +233,12 @@ public class EditProduct extends javax.swing.JFrame {
         String available = (String) txtState.getSelectedItem();
         
         //Paso como parámetros las variables auxiliares
-        control.save(productName, clientName, productPrice, productDescription, available);
+        control.saveProduct(prod, productName, clientName, productPrice, productDescription, available);
         
         //Mensaje para notificar la acción
-        JOptionPane optionPane = new JOptionPane("Producto guardado");
+        JOptionPane optionPane = new JOptionPane("Producto actualizado");
         optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-        JDialog dialog = optionPane.createDialog("Guardado correcto");
+        JDialog dialog = optionPane.createDialog("Edición correcta");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
     }//GEN-LAST:event_btnSaveActionPerformed
@@ -317,7 +319,8 @@ public class EditProduct extends javax.swing.JFrame {
 
     private void loadProduct(int idClient) {
         
-        Product prod = control.getSingleProduct(idClient);
+        //Apunta a la variable global
+        this.prod = control.getSingleProduct(idClient);
         
         txtName.setText(prod.getName());
         txtClient.setText(prod.getClient());

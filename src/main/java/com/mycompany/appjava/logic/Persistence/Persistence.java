@@ -33,4 +33,16 @@ public class Persistence {
     public Product getSingleProduct(int idClient) {
         return productJpa.findProduct(idClient);
     }
+
+    public void saveProduct(Product prod) {
+        productJpa.edit(prod);
+    }
+
+    public Client findClient(int idClient) {
+        return clientJpa.findClient(idClient);
+    }
+
+    public void saveClient(Client cl) {
+        clientJpa.edit(cl);
+    }
 }
