@@ -28,7 +28,8 @@ public class Controller {
         persistenceController.save(client, product);
     }
 
+    //Crear metodo para recoger productos en JPA
     public List<Product> getProduct() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        return persistenceController.getProduct();
+    };
 }

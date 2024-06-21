@@ -23,7 +23,7 @@ public class ProductList extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        productTable = new javax.swing.JTable();
         btnDelete = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
 
@@ -42,8 +42,10 @@ public class ProductList extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(54, 33, 89));
 
-        jTable1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        productTable.setBackground(new java.awt.Color(51, 51, 51));
+        productTable.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        productTable.setForeground(new java.awt.Color(255, 255, 255));
+        productTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -54,7 +56,7 @@ public class ProductList extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(productTable);
 
         btnDelete.setBackground(new java.awt.Color(110, 89, 222));
         btnDelete.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,12 +143,13 @@ public class ProductList extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable productTable;
     // End of variables declaration//GEN-END:variables
     private void loadTable(){
         //Modelo de la tabla
         DefaultTableModel table = new DefaultTableModel (){
             //Definir filas y columnas no editables
+            @Override
             public boolean isCellEditable (int row, int column) {
                 return false;
             }
@@ -167,6 +170,8 @@ public class ProductList extends javax.swing.JFrame {
                 table.addRow(obj);
             }
         }
+        //Establecer modelo para la tabla
+        productTable.setModel(table);
     }
 }
 

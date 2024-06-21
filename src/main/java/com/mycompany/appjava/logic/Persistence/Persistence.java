@@ -2,6 +2,7 @@ package com.mycompany.appjava.logic.Persistence;
 
 import com.mycompany.appjava.logic.Client;
 import com.mycompany.appjava.logic.Product;
+import java.util.List;
 
 /**
  *
@@ -17,5 +18,10 @@ public class Persistence {
         //Uso de métodos (crear en la BD el cliente y el producto)
         clientJpa.create(client);
         productJpa.create(product);
+    }
+
+    //Método JPA para recuperar los productos
+    public List<Product> getProduct() {
+        return productJpa.findProductEntities();
     }
 }
