@@ -234,6 +234,9 @@ public class Products extends javax.swing.JFrame {
         JDialog dialog = optionPane.createDialog("Guardado correcto");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
+        
+        //Cerrar al guardar
+        this.dispose();
     }//GEN-LAST:event_btnSaveActionPerformed
 
     //Botón para limpiar formulario

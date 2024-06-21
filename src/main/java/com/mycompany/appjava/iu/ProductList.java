@@ -180,8 +180,10 @@ public class ProductList extends javax.swing.JFrame {
                 EditProduct edit = new EditProduct(idClient);
                 edit.setVisible(true);
                 edit.setLocationRelativeTo(null);
+                //Cerrar ventana al hacer click en editar
+                this.dispose();
     }//GEN-LAST:event_btnEditActionPerformed
-        }
+        } 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

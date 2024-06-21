@@ -241,6 +241,14 @@ public class EditProduct extends javax.swing.JFrame {
         JDialog dialog = optionPane.createDialog("Edición correcta");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
+        
+        //Cuando se haya guardado el producto, se carga la tabla de productos
+        ProductList productList = new ProductList();
+        productList.setVisible(true);
+        productList.setLocationRelativeTo(null);
+        
+        //Cerrar al actualizar
+        this.dispose();
     }//GEN-LAST:event_btnSaveActionPerformed
 
     //Botón para limpiar formulario
