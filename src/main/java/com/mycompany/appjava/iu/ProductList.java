@@ -175,7 +175,9 @@ public class ProductList extends javax.swing.JFrame {
             //Se tiene que haber seleccionado un producto como mínimo
             if (productTable.getSelectedRow()!=-1) {
                 int idClient = Integer.parseInt(String.valueOf(productTable.getValueAt (productTable.getSelectedRow (), 0)));
-                EditProduct edit = new EditProduct();
+                
+                //Se pasa el id del cliente al seleccionar el producto a la vista de editar
+                EditProduct edit = new EditProduct(idClient);
                 edit.setVisible(true);
                 edit.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnEditActionPerformed

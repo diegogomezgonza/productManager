@@ -5,6 +5,7 @@
 package com.mycompany.appjava.iu;
 
 import com.mycompany.appjava.logic.Controller;
+import com.mycompany.appjava.logic.Product;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
@@ -12,9 +13,17 @@ public class EditProduct extends javax.swing.JFrame {
 
     //Creo una instancia de la controladora para poder manipular la información desde la IU
     Controller control = null;
+    int idClient;
     
-    public EditProduct() {
+    public EditProduct(int idClient) {
+        control = new Controller();
+        this.idClient = idClient;
         initComponents();
+        loadProduct(idClient);
+    }
+
+    private EditProduct() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @SuppressWarnings("unchecked")
@@ -305,4 +314,21 @@ public class EditProduct extends javax.swing.JFrame {
     private javax.swing.JTextField txtPrice;
     private javax.swing.JComboBox<String> txtState;
     // End of variables declaration//GEN-END:variables
-}
+
+    private void loadProduct(int idClient) {
+        
+        Product prod = control.getProducts(idClient);
+        
+        txtName.setText(prod.getName());
+        txtClient.setText(prod.getClient());
+        txtPrice.setText(prod.getPrice());
+        txtDescription.setText(prod.getDescription());
+        
+        // Condición para mostrar el resultado en base a la posición
+        if (prod.getState().equals("DISPONIBLE")){
+        txtState.setSelectedIndex(1);
+         }
+        else {
+        txtState.setSelectedIndex(2);
+        }
+}}
