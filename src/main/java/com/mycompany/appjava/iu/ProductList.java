@@ -153,10 +153,20 @@ public class ProductList extends javax.swing.JFrame {
         }; 
         
         //Nombres para las columnas
-        String title[] = {"Producto", "Cliente", "Precio", "Estado", "Descripción"};
+        String title[] = {"ID Cliente", "Producto", "Precio", "Estado", "Descripción"};
         table.setColumnIdentifiers(title);
         
+        //Cargar datos desde la BD
+        List <Product> productList = control.getProduct();
         
+        //Iterar la lista
+        if (productList!=null) {
+            for (Product prod : productList) {
+                Object[] obj = {prod.getIdClient(), prod.getName(), prod.getPrice(), prod.getState(), prod.getDescription()};
+                
+                table.addRow(obj);
+            }
+        }
     }
 }
 
