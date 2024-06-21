@@ -61,6 +61,11 @@ public class Main extends javax.swing.JFrame {
         btnProducts.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         btnProducts.setForeground(new java.awt.Color(255, 255, 255));
         btnProducts.setText("Mis productos");
+        btnProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductsActionPerformed(evt);
+            }
+        });
 
         btnOut.setBackground(new java.awt.Color(110, 89, 222));
         btnOut.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
@@ -179,6 +184,18 @@ public class Main extends javax.swing.JFrame {
         // centrada
         data.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnImportActionPerformed
+
+    private void btnProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductsActionPerformed
+        // TODO add your handling code here:
+        ProductList data = new ProductList();
+
+        // Cuando se haga click, aparecerá la pantalla de la lista de productos
+        data.setVisible(true);
+
+        // Al abrirse la pantalla, la posición de la nueva pantalla siempre estará
+        // centrada
+        data.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnProductsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

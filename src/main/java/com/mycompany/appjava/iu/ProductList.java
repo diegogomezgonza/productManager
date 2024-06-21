@@ -59,9 +59,11 @@ public class ProductList extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         btnDelete.setBackground(new java.awt.Color(110, 89, 222));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Eliminar");
 
         btnEdit.setBackground(new java.awt.Color(110, 89, 222));
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
         btnEdit.setText("Editar");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

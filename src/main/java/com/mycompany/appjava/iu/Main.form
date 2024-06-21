@@ -180,6 +180,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Mis productos"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProductsActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnOut">
               <Properties>
