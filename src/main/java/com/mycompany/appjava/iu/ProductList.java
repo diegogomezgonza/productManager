@@ -3,6 +3,8 @@ package com.mycompany.appjava.iu;
 import com.mycompany.appjava.logic.Controller;
 import com.mycompany.appjava.logic.Product;
 import java.util.List;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class ProductList extends javax.swing.JFrame {
@@ -61,6 +63,11 @@ public class ProductList extends javax.swing.JFrame {
         btnDelete.setBackground(new java.awt.Color(110, 89, 222));
         btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Eliminar");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnEdit.setBackground(new java.awt.Color(110, 89, 222));
         btnEdit.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,6 +141,26 @@ public class ProductList extends javax.swing.JFrame {
         //Al abrir la ventana, se cargan los productos 
         loadTable();
     }//GEN-LAST:event_formWindowOpened
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        // Siempre que la tabla no esté vacía
+        if (productTable.getRowCount() > 0) {
+            //Se tiene que haber seleccionado un producto como mínimo
+            if (productTable.getSelectedRow()!=-1) {
+                int idClient = Integer.parseInt(String.valueOf(productTable.getValueAt (productTable.getSelectedRow (), 0)));
+                control.deleteProduct(idClient);
+                
+                
+         //Mensaje para notificar la acción
+        JOptionPane optionPane = new JOptionPane("Producto eliminado");
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Has eliminado el producto");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+            }
+        }
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

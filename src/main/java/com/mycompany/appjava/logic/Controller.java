@@ -32,4 +32,8 @@ public class Controller {
     public List<Product> getProduct() {
         return persistenceController.getProduct();
     };
+
+    public void deleteProduct(int idClient) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
