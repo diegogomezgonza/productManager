@@ -8,7 +8,7 @@ public class Controller {
     //Objeto para el controlador de persistencia
     Persistence persistenceController = new Persistence();
 
-    public void save(String productName, String clientName, String productPrice, String productDescription, String available) {
+    public void save(String productName, String productPrice, String productDescription) {
         //Instancias para cada clase
         //Clase cliente
         Client client = new Client();
