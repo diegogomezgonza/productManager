@@ -158,6 +158,7 @@ public class ProductList extends javax.swing.JFrame {
         JDialog dialog = optionPane.createDialog("Has eliminado el producto");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
+        loadTable();
             }
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
