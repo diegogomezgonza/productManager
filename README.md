@@ -20,7 +20,7 @@ Este es un proyecto de Product Manager desarrollado en NetBeans 21, utilizando J
 ## Requisitos
 ### NetBeans 21
 ### JDK 17
-### WAMP Server
+### WAMP 
 ### MySQL Connector 8.0.17
 ## Instalación
 ### Instalar NetBeans 21:
